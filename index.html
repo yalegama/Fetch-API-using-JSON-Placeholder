@@ -9,13 +9,30 @@
     <title>Fetch API SandBox</title>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- bootstrap style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
 </head>
 <body>
-    <button id="getText">Get Text</button>
-    <button id="getUsers">Get JSON</button>
-    <button id="getPosts">Get API Data</button>
-    <button id="refresh">Refresh</button>
+    <div class="container">
+        <h1 class="display-4 mb-4">Fetch API SandBox</h1>
+     <div class="d-flex">
+        <button class="btn btn-primary mr-4" id="getText">Get Text</button>
+        <button class="btn btn-success mr-4" id="getUsers">Get JSON</button>
+        <button class="btn btn-warning mr-4" id="getPosts">Get API Data</button>
+        <button class="btn btn-secondary mr-4" id="refresh">Refresh</button>
+     </div>
     <div id="output"></div>
+    <form action="" id="addPost">
+        <div class="form-group">
+            <input type="text" id="title" placeholder="Title" class="form-control mt-4">
+        </div>
+        <div class="form-group">
+            <textarea name="" id="body" placeholder="Body" class="form-control mt-4" ></textarea>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary mt-4">
+    </form>
+    </div>
 </body>
 <!-- Javascript File -->
 <script src="./script.js"></script>
