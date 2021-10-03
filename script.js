@@ -38,3 +38,31 @@ function getUsers(){
 
 
 }
+
+/**Get Api Data */
+
+document.getElementById('getPosts').addEventListener('click',getPosts);
+
+function getPosts(){
+        fetch('https://jsonplaceholder.typicode.com/posts')
+        .then((res)=>res.json())
+        .then((users)=>{
+            let output=`<h1>Users</h1>`
+            users.forEach((value,index,array)=>{
+                output+=`
+                
+                <div>
+                
+                <h2>User Id: ${value.userId}</h2>
+                <h2>Id: ${value.id}</h2>
+                <h3>Title: ${value.title}</h3>
+                <p>Body: ${value.body}</p>
+
+                </div>
+
+                `
+            })
+            document.getElementById('output').innerHTML=output;
+        })
+        .catch((err)=>console.log("Error"))
+}
